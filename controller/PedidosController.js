@@ -28,7 +28,7 @@ class PedidosController {
     async fazerPedido (req,res) {
         let ok;
 
-        if(req.body.nome && req.body.endereco && req.body.pao && req.body.queijo && req.body.hamburguer && req.body.acompanhamento) {
+        if(req.body.nome) {
             let pedido = new PedidosModel();
             pedido.nome = req.body.nome;
             pedido.endereco = req.body.endereco;
@@ -84,7 +84,7 @@ class PedidosController {
 
     async editar (req,res) {
         let ok;
-        if(req.body.nome && req.body.endereco && req.body.pao && req.body.queijo && req.body.hamburguer && req.body.acompanhamento) {
+        if(req.body.nome) {
 
             let pedido = new PedidosModel();
             pedido.id = req.body.id;
