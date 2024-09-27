@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(function(resposta) {
                 if(resposta.ok) {
                     alert(resposta.msg)
+                     window.location.href = '/admin';
                 }
                 else {
                     alert(resposta.msg);
@@ -101,8 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch (function(e) {
                 console.error('ocorreu um erro no fetch' + e);
             }) 
-            window.location.href = '/admin';
-            location.reload();
+           
         }
         
     }
